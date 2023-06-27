@@ -4,7 +4,7 @@ import FamilyInfo from "@/components/Personal/FamilyInfo";
 import AppLayout from "@/layouts/AppLayout";
 import { useState } from "react";
 
-export default function General() {
+export default function Personal() {
   const [tab, setTab] = useState<number>(1);
 
   const tabActive = (active: number) => {
