@@ -1,4 +1,6 @@
 import BasicInfo from "@/components/Personal/BasicInfo";
+import EmergencyContact from "@/components/Personal/EmergencyContact";
+import FamilyInfo from "@/components/Personal/FamilyInfo";
 import AppLayout from "@/layouts/AppLayout";
 import { useState } from "react";
 
@@ -19,6 +21,8 @@ export default function General() {
       </div>
       <div className="mt-5">
         {tab === 1 && <BasicInfo />}
+        {tab === 2 && <FamilyInfo />}
+        {tab === 3 && <EmergencyContact />}
       </div>
     </div>
   </AppLayout>);

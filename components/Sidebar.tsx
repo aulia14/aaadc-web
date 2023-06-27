@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Header from "./Header";
-import { BiSolidChevronRight } from "react-icons/bi";
+import { BiChevronRight } from "react-icons/bi";
 
 interface CProps {
   children: React.ReactNode;
@@ -29,7 +29,7 @@ export default function Sidebar({children}: CProps) {
           <label tabIndex={0} className="w-full flex items-center justify-between">
             <span>General</span>
             <div className="aricons">
-              <BiSolidChevronRight size={22} />
+              <BiChevronRight size={22} />
             </div>
           </label>
           <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-lg w-52">
