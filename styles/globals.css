@@ -8,3 +8,40 @@ body {
 .tab.tab-active:not(.tab-disabled):not([disabled]) {
   border-color: rgb(192, 42, 52);
 }
+.menu-item,
+.menu-item-nested {
+  color: rgb(0, 0, 0);
+}
+.menu-item.menu-active,
+.menu-item.menu-active:hover,
+.menu-item.menu-active:focus,
+.menu-item.menu-active:active,
+.menu-item.menu-active *:hover {
+  background-color: rgb(192, 42, 52);
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+}
+.menu-item-nested.menu-active,
+.menu-item-nested.menu-active:active,
+.menu-item-nested.menu-active:focus {
+  background-color: rgb(192, 42, 52);
+}
+.menu-item-nested.menu-active label,
+.menu-item-nested.menu-active label:active,
+.menu-item-nested.menu-active label:focus {
+  background-color: rgb(192, 42, 52);
+  color: rgb(255, 255, 255);
+}
+.menu-item-nested.menu-active .nested-item.nested-active,
+.menu-item-nested.menu-active .nested-item.nested-active:hover,
+.menu-item-nested.menu-active .nested-item.nested-active:focus,
+.menu-item-nested.menu-active .nested-item.nested-active:active {
+  color: rgb(192, 42, 52);
+  font-weight: 500;
+}
+.menu-item-nested .nested-item:hover,
+.menu-item-nested .nested-item:active,
+.menu-item-nested .nested-item:focus {
+  background-color: transparent;
+  color: rgb(0, 0, 0);
+}
