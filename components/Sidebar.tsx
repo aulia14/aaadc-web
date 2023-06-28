@@ -20,7 +20,7 @@ export default function Sidebar({children}: CProps) {
         {children}
       </div>
     </div>
-    <div className="drawer-side border-r shadow rounded-r-lg overflow-y-visible">
+    <div className="drawer-side border-r-0 shadow rounded-r-lg overflow-y-visible md:border-r">
       <label htmlFor="sidebar" className="drawer-overlay"></label>
       <ul className="menu p-4 w-64 h-full bg-white text-base-content">
         <div className="py-6 mb-3">
@@ -30,7 +30,7 @@ export default function Sidebar({children}: CProps) {
           if (!rts.children) return (<li className="text-base mb-2" key={key}>
             <div className="flex items-center gap-4">
               <div className="aricons">{rts.icon}</div>
-              <Link href={rts.path} className="text-sm">{rts.label}</Link>
+              <Link href={rts.path} className="text-sm w-full">{rts.label}</Link>
             </div>
           </li>);
           if (rts.children) return (<li className="text-base dropdown dropdown-right mb-2" key={key}>

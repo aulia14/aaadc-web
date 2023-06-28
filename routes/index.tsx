@@ -1,4 +1,13 @@
-import { FiUser, FiAirplay, FiTarget, FiBriefcase } from "react-icons/fi";
+import {
+  FiUser,
+  FiAirplay,
+  FiTarget,
+  FiBriefcase,
+  FiCreditCard,
+  FiFileText,
+  FiArchive,
+  FiGrid
+} from "react-icons/fi";
 
 const routes = [
   {
@@ -62,6 +71,40 @@ const routes = [
         path: "/payslip"
       }
     ]
+  },
+  {
+    label: "Finance",
+    path: "/finance",
+    icon: <FiCreditCard size={22} />,
+    children: [
+      {
+        label: "Reimbursement",
+        path: "/reimbursement"
+      },
+      {
+        label: "Loan",
+        path: "/loan"
+      },
+      {
+        label: "Cash Advance",
+        path: "/cash-advance"
+      }
+    ]
+  },
+  {
+    label: "Files",
+    path: "/files",
+    icon: <FiFileText size={22} />
+  },
+  {
+    label: "Assets",
+    path: "/assets",
+    icon: <FiArchive size={22} />
+  },
+  {
+    label: "History",
+    path: "/history",
+    icon: <FiGrid size={22} />
   }
 ];
 
