@@ -1,4 +1,4 @@
-import { FiUser, FiAirplay, FiTarget } from "react-icons/fi";
+import { FiUser, FiAirplay, FiTarget, FiBriefcase } from "react-icons/fi";
 
 const routes = [
   {
@@ -45,6 +45,21 @@ const routes = [
       {
         label: "Overtime",
         path: "/overtime"
+      }
+    ]
+  },
+  {
+    label: "Payroll",
+    path: "/payroll",
+    icon: <FiBriefcase size={22} />,
+    children: [
+      {
+        label: "Payroll Info",
+        path: "/info"
+      },
+      {
+        label: "Payslip",
+        path: "/payslip"
       }
     ]
   }
