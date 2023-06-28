@@ -1,4 +1,4 @@
-import { FiUser, FiAirplay } from "react-icons/fi";
+import { FiUser, FiAirplay, FiTarget } from "react-icons/fi";
 
 const routes = [
   {
@@ -27,6 +27,25 @@ const routes = [
         label: "Additional Info",
         path: "/additional-info"
       },
+    ]
+  },
+  {
+    label: "Time Management",
+    path: "/time",
+    icon: <FiTarget size={22} />,
+    children: [
+      {
+        label: "Attendance",
+        path: "/attendance"
+      },
+      {
+        label: "Timeoff",
+        path: "/timeoff"
+      },
+      {
+        label: "Overtime",
+        path: "/overtime"
+      }
     ]
   }
 ];

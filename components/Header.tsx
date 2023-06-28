@@ -1,6 +1,12 @@
-export default function Header() {
+interface CProps {
+  children: React.ReactNode;
+}
+
+export default function Header({children}: CProps) {
   return <div className="flex justify-between items-center bg-white rounded-lg py-3 px-5 border shadow mb-3 md:mb-7">
-    <div></div>
+    <div className="">
+      {children}
+    </div>
     <div className="flex items-center gap-2">
       <div className="flex flex-col items-end">
         <span className="font-bold leading-5">Agung Ardiyanto</span>
