@@ -17,7 +17,7 @@ const routes = [
   },
   {
     label: "General",
-    path: "/general",
+    path: "/dashboard/general",
     icon: <FiUser size={22} />,
     children: [
       {
@@ -40,7 +40,7 @@ const routes = [
   },
   {
     label: "Time Management",
-    path: "/time",
+    path: "/dashboard/time",
     icon: <FiTarget size={22} />,
     children: [
       {
@@ -59,7 +59,7 @@ const routes = [
   },
   {
     label: "Payroll",
-    path: "/payroll",
+    path: "/dashboard/payroll",
     icon: <FiBriefcase size={22} />,
     children: [
       {
@@ -74,7 +74,7 @@ const routes = [
   },
   {
     label: "Finance",
-    path: "/finance",
+    path: "/dashboard/finance",
     icon: <FiCreditCard size={22} />,
     children: [
       {
@@ -93,17 +93,17 @@ const routes = [
   },
   {
     label: "Files",
-    path: "/files",
+    path: "/dashboard/files",
     icon: <FiFileText size={22} />
   },
   {
     label: "Assets",
-    path: "/assets",
+    path: "/dashboard/assets",
     icon: <FiArchive size={22} />
   },
   {
     label: "History",
-    path: "/history",
+    path: "/dashboard/history",
     icon: <FiGrid size={22} />
   }
 ];
