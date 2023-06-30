@@ -1,5 +1,6 @@
 import localFont from "next/font/local";
 import Link from "next/link";
+import { setCookie } from "cookies-next";
 
 const font = localFont({src: [
   {
@@ -35,6 +36,11 @@ const font = localFont({src: [
 ]});
 
 export default function AuthLogin() {
+  const handleLogin = async () => {
+    const cok = setCookie("_aA_AdC", true, {});
+    return location.reload();
+  }
+
   return (
     <div className={`min-h-screen flex flex-col justify-center items-center py-5 mx-5 md:mx-24 xl:mx-24 ${font.className}`}>
       <div className="bg-white rounded-lg shadow py-9 px-5 w-full md:px-9 md:w-2/4 lg:w-2/4 xl:w-2/6">
@@ -57,7 +63,7 @@ export default function AuthLogin() {
             autoComplete="off"
           />
         </div>
-        <button className="w-full text-white text-sm bg-blue-600 rounded-lg py-3 mt-8">Sign in</button>
+        <button className="w-full text-white text-sm bg-blue-600 rounded-lg py-3 mt-8" onClick={handleLogin}>Sign in</button>
         <div className="divider mt-6">OR</div>
         <div className="flex flex-col gap-3 mt-6">
           <button className="border text-sm rounded-lg py-2.5">Sign in with Google</button>

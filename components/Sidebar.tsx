@@ -13,7 +13,7 @@ export default function Sidebar({children}: CProps) {
   const router = useRouter();
 
   useEffect(() => {
-    // console.log(router.asPath.split("/")[1]);
+    console.log(router.asPath.split("/")[2]);
   }, [router]);
 
   return (<div className="drawer lg:drawer-open">
@@ -48,7 +48,7 @@ export default function Sidebar({children}: CProps) {
           );
           if (rts.children) return (
             <li
-              className={`rounded-lg menu-item-nested text-base dropdown dropdown-right mb-2 ${"/" + router.asPath.split("/")[1] === rts.path ? "menu-active" : ""}`}
+              className={`rounded-lg menu-item-nested text-base dropdown dropdown-right mb-2 ${router.asPath.split("/")[2] === rts.path.split("/")[2] ? "menu-active" : ""}`}
               key={key}
             >
               <label tabIndex={0} className="w-full flex items-center justify-between">
