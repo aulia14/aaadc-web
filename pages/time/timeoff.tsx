@@ -42,7 +42,7 @@ export default function Timeoff() {
       <div className="text-sm text-gray-500 font-semibold italic mt-10 mb-3.5">This is a summary of your time off balance</div>
       <div className="text-xs font-semibold flex items-center gap-2">
         <button type="button" className="border-2 border-primary bg-white rounded-lg py-2.5 px-3.5">Request Timeoff</button>
-        <button type="button" className="border-2 border-primary bg-white rounded-lg py-2.5 px-3.5">Request Delegation</button>
+        {/* <button type="button" className="border-2 border-primary bg-white rounded-lg py-2.5 px-3.5">Request Delegation</button> */}
       </div>
       <div className={data.length > 0 ? "mt-12" : "mt-0"}>
         <TableData column={columns} data={data} />
