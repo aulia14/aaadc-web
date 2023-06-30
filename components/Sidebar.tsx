@@ -13,7 +13,7 @@ export default function Sidebar({children}: CProps) {
   const router = useRouter();
 
   useEffect(() => {
-    console.log(router.asPath.split("/")[1]);
+    // console.log(router.asPath.split("/")[1]);
   }, [router]);
 
   return (<div className="drawer lg:drawer-open">

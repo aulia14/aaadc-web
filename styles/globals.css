@@ -49,3 +49,20 @@ body {
 .divider:after {
   height: 1px;
 }
+.rdt_Table {
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.rdt_TableHeadRow {
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 600;
+  border-bottom: 0 !important;
+  color: rgb(255, 255, 255);
+}
+.rdt_TableHeadRow .rdt_TableCol {
+  background: rgb(192, 42, 52);
+}
+.rdt_TableBody .rdt_TableRow {
+  font-size: 14px;
+}
