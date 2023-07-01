@@ -9,10 +9,13 @@ const userSlice = createSlice({
   reducers: {
     setAuth: (state, param) => {
       state.auth = param.payload;
+    },
+    setUser: (state, param) => {
+      state.user = param.payload;
     }
   }
 });
 
-export const { setAuth } = userSlice.actions;
+export const { setAuth, setUser } = userSlice.actions;
 
 export default userSlice.reducer;
