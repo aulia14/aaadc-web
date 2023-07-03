@@ -1,7 +1,12 @@
 import AppLayout from "@/layouts/AppLayout";
 import TableData from "@/components/DataTable";
+import RequestAttendance from "@/components/Modal/RequestAttendance";
+import { openRequestAttendance } from "@/store/reducers/modal";
+import { useDispatch } from "react-redux";
 
 export default function Attendance() {
+  const dispatch = useDispatch();
+
   const columns = [
     {name: "Request Type", selector: (row: any) => row.request},
     {name: "Created Date", selector: (row: any) => row.created_date},
@@ -24,17 +29,28 @@ export default function Attendance() {
     // },
   ];
 
+  const openRequest = () => {
+    dispatch(openRequestAttendance(true));
+  }
+
   return (<AppLayout title="Attendance">
     <div className="border rounded-lg bg-white shadow p-6 relative">
       <h3 className="text-2xl font-normal">Your attendance information</h3>
       <div className="text-sm text-gray-500 font-semibold italic mt-10 mb-3.5">This is a summary of your attendance information</div>
       <div className="text-xs font-semibold flex items-center gap-2">
-        <button type="button" className="border-2 border-primary bg-white rounded-lg py-2.5 px-3.5">Request Shift / Attendance</button>
+        <button
+          type="button"
+          className="border-2 border-primary bg-white rounded-lg py-2.5 px-3.5"
+          onClick={openRequest}
+        >
+          Request Shift / Attendance
+        </button>
         <button type="button" className="border-2 border-primary bg-white rounded-lg py-2.5 px-3.5">View Attendance Log</button>
       </div>
       <div className={data.length > 0 ? "mt-12" : "mt-0"}>
         <TableData column={columns} data={data} />
       </div>
     </div>
+    <RequestAttendance title="Request Shift / Attendance" />
   </AppLayout>);
 }

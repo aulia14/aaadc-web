@@ -66,3 +66,21 @@ body {
 .rdt_TableBody .rdt_TableRow {
   font-size: 14px;
 }
+.react-datepicker {
+  font-family: inherit !important;
+}
+.react-datepicker {
+  border: 0 !important;
+}
+.react-datepicker__current-month {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 1.5rem;
+}
+.react-datepicker__header  {
+  background-color: transparent !important;
+}
+.react-datepicker__day--selected {
+  background-color: rgb(192, 42, 52) !important;
+}

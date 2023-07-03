@@ -15,6 +15,7 @@ module.exports = {
       },
       colors: {
         'primary': 'rgb(192, 42, 52)',
+        'primary-semidark': '#63010C',
         'secondary-gray': '#f2f4f7'
       }
     },
