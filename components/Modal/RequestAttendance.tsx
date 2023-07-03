@@ -47,13 +47,16 @@ export default function RequestAttendance({title}: CProps) {
               <span className="font-bold text-white text-xl">{moment(date).format("YYYY")}</span>
             </div>
           </div>
-          <DatePicker
-            selected={date}
-            onChange={handleChange}
-            minDate={moment().startOf("month").toDate()}
-            maxDate={moment().endOf("month").toDate()}
-            inline
-          />
+          <div>
+            <DatePicker
+              selected={date}
+              onChange={handleChange}
+              minDate={moment().startOf("month").toDate()}
+              maxDate={moment().endOf("month").toDate()}
+              inline
+            />
+            <button type="button" className="text-sm bg-primary ml-3 mb-3 text-white px-3.5 py-1.5 rounded-md">Select</button>
+          </div>
         </div>
         </div>
     </div>
